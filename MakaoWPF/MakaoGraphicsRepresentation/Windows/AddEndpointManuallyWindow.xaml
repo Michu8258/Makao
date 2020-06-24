@@ -1,0 +1,29 @@
+﻿<Window x:Class="MakaoGraphicsRepresentation.Windows.AddEndpointManuallyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakaoGraphicsRepresentation.Windows"
+        mc:Ignorable="d"
+        Title="Dodaj hosta ręcznie" Height="180" Width="280" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Podaj adres IP hosta:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="25" Width="180"
+            HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Label Content="               .                 .                  ." HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="20,50,0,0" Height="25" Width="230" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+
+        <TextBox x:Name="FirstOctet" HorizontalAlignment="Left" Height="25" Margin="20,50,0,0" TextWrapping="NoWrap" Text=""
+                 VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="SecondOctet" HorizontalAlignment="Left" Height="25" Margin="80,50,0,0" TextWrapping="NoWrap" Text=""
+                 VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="ThirdOctet" HorizontalAlignment="Left" Height="25" Margin="140,50,0,0" TextWrapping="NoWrap" Text=""
+                 VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="FourthOctet" HorizontalAlignment="Left" Height="25" Margin="200,50,0,0" TextWrapping="NoWrap" Text=""
+                 VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="OKButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="25" Width="80" Content="OK"
+            Margin="50,0,0,15" Click="OKButton_Click"/>
+        <Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="25" Width="80" Content="Anuluj"
+            Margin="0,0,50,15" Click="CancelButton_Click"/>
+    </Grid>
+</Window>

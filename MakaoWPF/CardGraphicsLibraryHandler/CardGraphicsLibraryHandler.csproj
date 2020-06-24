@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57DBCBA2-7496-41ED-AC40-4DFFD257A9E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CardGraphicsLibraryHandler</RootNamespace>
+    <AssemblyName>CardGraphicsLibraryHandler</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.7\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackColorEnum.cs" />
+    <Compile Include="BackgroundImageObtainer.cs" />
+    <Compile Include="CardBackImageSourceObtainer.cs" />
+    <Compile Include="CardImageSourceObtainer.cs" />
+    <Compile Include="CardSuitsImageSourceObtainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\two_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\two_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\two_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\two_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\three_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\three_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\three_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\three_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\four_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\four_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\four_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\four_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\five_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\five_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\five_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\five_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\six_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\six_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\six_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\six_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\seven_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\seven_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\seven_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\seven_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\eight_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\eight_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\eight_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\eight_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nine_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nine_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nine_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nine_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ten_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ten_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ten_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ten_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ace_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ace_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ace_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ace_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\joker_of_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jack_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jack_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jack_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jack_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\king_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\king_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\king_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\king_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\queen_of_club.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\queen_of_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\queen_of_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\queen_of_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MakaoInterfaces\MakaoInterfaces.csproj">
+      <Project>{be8c07d2-b515-4575-b4c1-9e5187d51d3d}</Project>
+      <Name>MakaoInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mainbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\clubsuit.png" />
+    <Resource Include="Resources\diamondsuit.png" />
+    <Resource Include="Resources\heartsuit.png" />
+    <Resource Include="Resources\spadesuit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\backgraphicsblue.png" />
+    <Resource Include="Resources\backgraphicsgray.png" />
+    <Resource Include="Resources\backgraphicsgreen.png" />
+    <Resource Include="Resources\backgraphicspurple.png" />
+    <Resource Include="Resources\backgraphicsred.png" />
+    <Resource Include="Resources\backgraphicsyellow.png" />
+    <Resource Include="Resources\highlight_of_green.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

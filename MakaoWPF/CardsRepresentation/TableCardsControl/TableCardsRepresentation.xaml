@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="CardsRepresentation.TableCardsRepresentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CardsRepresentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="CardBack" TargetType="{x:Type local:MyButton}">
+            <Grid>
+                <Rectangle x:Name="MyBackground">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="White" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                </Rectangle>
+                <Image x:Name="CardPicture" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Source="{Binding Path=CardImage, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+            </Grid>
+        </ControlTemplate>
+        <Style x:Name="RectangleStyle" TargetType="{x:Type local:MyButton}">
+            <Setter Property="Template" Value="{StaticResource CardBack}"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="Frame" SizeChanged="Frame_SizeChanged" MouseWheel="Frame_MouseWheel">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="Transparent" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+        <!--First card-->
+        <Grid Grid.Column="3" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Blue" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="FirstCard" Grid.Column="1" Grid.Row="1"/>
+            <Grid x:Name="GreenCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--Second card-->
+        <Grid Grid.Column="2" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Yellow" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="SecondCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--Third card-->
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Green" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="ThirdCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--Fourth card-->
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Orange" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="FourthCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--fifth card-->
+        <Grid Grid.Column="3" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Red" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="FifthCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--Sixth card-->
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="White" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="SixthCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--Seventh card-->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Gray" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="SeventhCard" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <!--fifth card-->
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Rectangle Fill="Magenta" Grid.Column="1" Grid.Row="1"/>-->
+            <Grid x:Name="EightCard" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <Grid x:Name="LastCardShader" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Rectangle Fill="White" Opacity="1" Margin="0,0,0,0"/>
+                <Rectangle Opacity="1" Width="80" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="MouseScroll.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

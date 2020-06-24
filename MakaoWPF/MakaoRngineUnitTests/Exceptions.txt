@@ -1,0 +1,9 @@
+Message: Test method MakaoRngineUnitTests.EngineTestClass.EngineConstructorTest threw exception: 
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'NLog, Version=4.0.0.0, 
+Culture=neutral, PublicKeyToken=5120e14c03d0593c' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+
+
+Message: Test method MakaoRngineUnitTests.EngineTestClass.EngineConstructorTest threw exception: 
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'NLog, Version=4.0.0.0, 
+Culture=neutral, PublicKeyToken=5120e14c03d0593c' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.

@@ -1,0 +1,21 @@
+﻿<Page x:Class="MakaoGraphicsRepresentation.RulesWindow.CardsDescriptionsPages.CardDescriptionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MakaoGraphicsRepresentation.RulesWindow.CardsDescriptionsPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="420" d:DesignWidth="660"
+      Title="CardDescriptionPage">
+
+    <Grid>
+        <TextBlock x:Name="Heading" Margin="250,10,250,0" TextWrapping="NoWrap" Height="30" FontWeight="Bold"
+                   Text="Text" VerticalAlignment="Top" FontSize="20" TextAlignment="Center"/>
+        <Image x:Name="CardOfSpades" HorizontalAlignment="Left" Height="180" Margin="60,50,0,0" VerticalAlignment="Top" Width="110"/>
+        <Image x:Name="CardOfHearths" HorizontalAlignment="Left" Height="180" Margin="195,50,0,0" VerticalAlignment="Top" Width="110"/>
+        <Image x:Name="CardOfClubs" HorizontalAlignment="Right" Height="180" Margin="0,50,195,0" VerticalAlignment="Top" Width="110"/>
+        <Image x:Name="CardOfDiamonds" HorizontalAlignment="Right" Height="180" Margin="0,50,60,0" VerticalAlignment="Top" Width="110"/>
+        <TextBlock x:Name="CardDescription" Margin="60,0,60,20" TextWrapping="WrapWithOverflow" Text="TextBlock" VerticalAlignment="Bottom"
+                   Height="130" FontSize="12" TextAlignment="Justify"/>
+    </Grid>
+</Page>

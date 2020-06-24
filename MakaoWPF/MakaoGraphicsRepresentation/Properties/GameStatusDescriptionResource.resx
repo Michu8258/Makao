@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BattleStatus01" xml:space="preserve">
+    <value>Tryb bitwy</value>
+    <comment>Heading</comment>
+  </data>
+  <data name="BattleStatus02" xml:space="preserve">
+    <value>Kiedy jeden z graczy postanowi wyłożyć na stół kartę waleczną, bitewną, rozpocznie się tryb bitwy. Wówczas na stół można wykładać tylko karty bitewne, i to takie, które będą pasowały kolorem lub figurą do poprzedniej karty. Przypominając, mowa tu o wszystkich dwójkach i trójkach, a także o królach pik i serce (pozostałe dwa króle nie są kartami bitewnymi).</value>
+    <comment>Right top</comment>
+  </data>
+  <data name="BattleStatus03" xml:space="preserve">
+    <value>Przy wykładaniu kart na stół, zliczana jest liczba kart do wzięcia przez gracza, który poniesie porażkę w bitwie - każda dwójka to 2, trójka to 3, a krót bitewny to 5 dodatkowych kart. Porażkę odnosi ten gracz, który nie może wyłożyć na stół żadnej pasującej karty bitewnej (może także skorzystać z jokera). Gdy gracz nie ma ruchu, wtedy musi wziąć kartę ze stosu - odpowiednia ilość od razu zostanie dodana do jego puli kart, a tryb gry wróci do standardowego.
+W tym trybie obowiązuje dodatkowa funkcjonalność - jeśli przegrany gracz, biorąc karty ze stołu, trafi pierwszą kartę bitewną, któa pasuje do ostantniej karty ze stołu, może położyć ją na stole (tylko tę jedną), wóczas nie ponosi porażki, a bitwa twra dalej. Jeśli zdaży się tak, że pierwszą kartą w stosie będzie joker, wówczas można zmienić go w inną bitewną kartę pasująco do kontekstu i również położyć na stole. Ponadto, król pik odwraca kierunek ruchu w  przeciwną stronę (na jeden ruch).</value>
+    <comment>Bottom</comment>
+  </data>
+  <data name="RankDemandingStatus01" xml:space="preserve">
+    <value>Tryb żądania figur</value>
+    <comment>Heading</comment>
+  </data>
+  <data name="RankDemandingStatus02" xml:space="preserve">
+    <value>Tryb żądania figur może być rozpoczęty wyłącznie wtedy, gdy gracz, któremu w danym momencie przysługuje ruch, wyłoży na stół jednego lub więcej wleta. Wówczas może on zażądać od pozostałych graczy wyłożenia na stół konkretnej figury - wyłącznie z puli kart niewalecznych i niefunkcyjnych.</value>
+    <comment>Right top</comment>
+  </data>
+  <data name="RankDemandingStatus03" xml:space="preserve">
+    <value>Jeśli gracz, który wykonuje ruch po graczu, który żądanie figur rozpoczął, a nie ma w ręku karty z żądaną figurą- bierze jedną kartę ze stosu. Jeśli dobrana figura pasuje do żądanej figury, wówczas może tę kartę położyć na stole (wyłącznie tę konkretną kartę). Natomiast jeśli gracz ma w ręku innego waleta, wówczas może przebić żądanie - zażądać innej figury. Jeśli na stół zostanie wyłożona choć jedna zażądana figura, wóczas żądania nie można już przebić. Dodatkowo istnieje możliwość wyłożenia na stół waleta bez żądania jakiejkolwiek figury. Wówczas taki walet jest traktowany jak karta niewaleczna i niefunkcyjna - kolejny gracz może położyć innego waleta, lub inną kartę o tym samym kolorze.
+Jeśli nikt nie przebije aktualnego żądania, to kiedy żądaną figurę wyłoży na stół gracz, który rozpoczął żądanie (lub weźmie kartę ze stosu w przypadku braku żądanej figury w ręku), to tryb żądania kończy się, a powraca tryb standardowy.</value>
+    <comment>Bottom</comment>
+  </data>
+  <data name="StandardStatus01" xml:space="preserve">
+    <value>Tryb standardowy</value>
+    <comment>Heading</comment>
+  </data>
+  <data name="StandardStatus02" xml:space="preserve">
+    <value>Tryb standardowy jest podstawowym trybem gry. Podczas gry w tym trybie, żadenemu graczowi nie grożą żadne negatywne konsekwencje. Z tego trybu można prześć bezpośrednio do każdego z innych trybów - zależy to od karty położonej na stół przez jednego z graczy. Wykładanie na stół niewalecznych i niefunkcyjnych kart podtrzymuje obowiązywanie tego trybu gry.</value>
+    <comment>Right top</comment>
+  </data>
+  <data name="StandardStatus03" xml:space="preserve">
+    <value>Przejścia do pozostałych trybów gry:
+1. Tryb żądania figur - jeden z graczy musi wyłożyć na stół co najmniej jednego waleta, oraz zażądać konkretnej figury,
+2. Tryb żadania koloru - jeden z graczy musi wyłożyć na stół co najmniej jednego asa, oraz zażądać konkretnego koloru,
+3. Tryb postoju - jeden z graczy musi wyłożyć na stół co najmniej jedną czwórkę,
+4. Tryb bitwy - jeden z graczy musi wyłożyć na stół co najmniej jedną kartę waleczną, bitewną (dwójka, czwórka, król (serce lub pik).
+Do wszystkich wymienionych trybów można przejść wykorzystując jokera.</value>
+    <comment>Bottom</comment>
+  </data>
+  <data name="StopsStatus01" xml:space="preserve">
+    <value>Tryb postojów</value>
+    <comment>Heading</comment>
+  </data>
+  <data name="StopsStatus02" xml:space="preserve">
+    <value>Do trybu postojów przechodzi się wówczas, gdy jeden z graczy wyłoży na stół choć jedną czwórkę. Wóczas kolejny gracz również może położyć na stół czwórkę. Różnicą w porównaniu do trybów żądania koloru czy figury jest konieczność posiadania przez kolenych graczy czwórek w rękach.</value>
+    <comment>Right top</comment>
+  </data>
+  <data name="StopsStatus03" xml:space="preserve">
+    <value>W przypadku, gdy poprzedni gracz wyłożył na stół czwórkę, nie można dobrać karty ze stołu - ta możliwość jest zablokowana. W związku z tym, kolejny gracz musi mieć czwórkę w ręku (lub jokera, któego zamieni w czwórkę). Jeśli gracz nie ma żadnej z powyższych możliwości ruchu - czeka tyle kolejek, ile czwórek pojawiło się w czasie trwania tego trybu na stole. Tzn. jeśli zostały wyłożone trzy czwórki, to stoi trzy kolejki. Oznacza to, że jeśli przychodzi kolej ruchu pauzującego gracza, nie wykonuje on ruchu, a ilośc kolejek które musi przeczekać maleje o 1. Dopiero, kiedy ilość kolejek do czekania spadnie do 0, może wykonać swój ruch.
+W tym trybie, możliwe jest wzięcie kolejek do czekania pomimo posiadania w ręku czwóki lub jokera (np. w celu ich późniejszego wykorzystania). Ponadto, gdy gracz nie ma czwórki lub jokera w ręku, wówczas to on będzie czekał kolejki - dzieje się to automatycznie. Po wytypowaniu gracza, który będzie czekał kolejki, tryb gry wraca do standardowego trybu.</value>
+    <comment>Bottom</comment>
+  </data>
+  <data name="SuitDemandingStatus01" xml:space="preserve">
+    <value>Tryb żądania koloru</value>
+    <comment>Heading</comment>
+  </data>
+  <data name="SuitDemandingStatus02" xml:space="preserve">
+    <value>Tryb żądania koloru jest bardzo zbliżony do trybu żądania figury. W tym przypadku, kartą którą można rozpocząć żądanie koloru, jest as. Przy wyłożeniu na stół jednego lub więcen asów, można zażądać od kolejnego gracza wyłożenia na stół konkretnego koloru (ważny jest kolor, w związku z tym, figura nie ma tutaj znaczenia): pik, kier, karo, trefl.</value>
+    <comment>Right top</comment>
+  </data>
+  <data name="SuitDemandingStatus03" xml:space="preserve">
+    <value>Podobnie jak w przypadku żądania koloru, gracz, którego kolej nastęuje po graczu, który zażądał koloru, może to żądanie przebić. Natomiast jeśli gracz kolejny nie ma żadnej karty o żądanym kolorze w ręku, dobiera jedną ze stosu kart (jeśli ta karta pasuje kolorem do żądania, wówczas może tę jedną kartę położyć na stole). W przypadku żądania koloru, tryb przestaje obowiązywać z pierwszą kartą wyłożoną na stół, której kolor pasuje do żądania. W związku z tym nie jest konieczne dotarcie ruchy do gracza rozpoczynającego żądanie.</value>
+    <comment>Bottom</comment>
+  </data>
+</root>

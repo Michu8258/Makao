@@ -1,0 +1,20 @@
+﻿<Window x:Class="MakaoGraphicsRepresentation.Windows.DemandTheRankWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakaoGraphicsRepresentation.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="Żądaj figur" Height="400" Width="460" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid>
+        <Button x:Name="ButtonCancel" Content="Anuluj" HorizontalAlignment="Right" Margin="0,0,150,20" Width="70" Height="20"
+                VerticalAlignment="Bottom" Click="ButtonCancel_Click"/>
+        <Button x:Name="ButtonOK" Content="OK" HorizontalAlignment="Left" Margin="150,0,0,20" Width="70" Height="20"
+                VerticalAlignment="Bottom" Click="ButtonOK_Click"/>
+        <Label Content="Wybierz figurę" Margin="20,15,20,0" VerticalAlignment="Top" FontSize="14"
+               HorizontalContentAlignment="Center"/>
+        <WrapPanel Height="260" Margin="20,50,20,0" VerticalAlignment="Top"
+                   x:Name="DemandedRankWrapPanel"/>
+    </Grid>
+</Window>

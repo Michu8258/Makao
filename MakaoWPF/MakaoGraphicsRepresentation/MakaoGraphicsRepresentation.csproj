@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Realm.4.1.0\build\Realm.props" Condition="Exists('..\packages\Realm.4.1.0\build\Realm.props')" />
+  <Import Project="..\packages\Realm.Fody.4.1.0\build\Realm.Fody.props" Condition="Exists('..\packages\Realm.Fody.4.1.0\build\Realm.Fody.props')" />
+  <Import Project="..\packages\FodyHelpers.4.0.2\build\FodyHelpers.props" Condition="Exists('..\packages\FodyHelpers.4.0.2\build\FodyHelpers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CF3894E-75CB-4707-AA50-31A2103D3278}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MakaoGraphicsRepresentation</RootNamespace>
+    <AssemblyName>MakaoGraphicsRepresentation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MakaoWPF.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>430D829BD9091B85C1ACDF294E74622CB6351104</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MakaoGraphicsRepresentation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FodyHelpers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=1ca091877d12ca03, processorArchitecture=MSIL">
+      <HintPath>..\packages\FodyHelpers.4.0.2\lib\net46\FodyHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.10.0.0, Culture=neutral, PublicKeyToken=1ca091877d12ca03, processorArchitecture=MSIL">
+      <HintPath>..\packages\FodyHelpers.4.0.2\lib\net46\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.10.0.0, Culture=neutral, PublicKeyToken=1ca091877d12ca03, processorArchitecture=MSIL">
+      <HintPath>..\packages\FodyHelpers.4.0.2\lib\net46\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.10.0.0, Culture=neutral, PublicKeyToken=1ca091877d12ca03, processorArchitecture=MSIL">
+      <HintPath>..\packages\FodyHelpers.4.0.2\lib\net46\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.10.0.0, Culture=neutral, PublicKeyToken=1ca091877d12ca03, processorArchitecture=MSIL">
+      <HintPath>..\packages\FodyHelpers.4.0.2\lib\net46\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Context, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Context.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Tasks.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Disposables, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Disposables.2.0.0\lib\netstandard2.0\Nito.Disposables.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.3\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Realm.4.1.0\lib\netstandard2.0\Realm.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\DefaultUserSettings.cs" />
+    <Compile Include="Classes\WrapPanelSelectableItem.cs" />
+    <Compile Include="Classes\DemandingWindowsEventArgs.cs" />
+    <Compile Include="Classes\EngineClientHandler.cs" />
+    <Compile Include="Classes\EngineHostHandler.cs" />
+    <Compile Include="Classes\GameFinishedEventArgs.cs" />
+    <Compile Include="Classes\GameFinishedListViewItem.cs" />
+    <Compile Include="Classes\MakaoGameClientServiceAddresObtainer.cs" />
+    <Compile Include="Classes\ListViewDataClasses.cs" />
+    <Compile Include="Classes\MakaoGameClientServiceAlivenessChecker.cs" />
+    <Compile Include="Classes\MakaoGameHostServiceEndpointObtainer.cs" />
+    <Compile Include="Classes\StringCardNameGenerator.cs" />
+    <Compile Include="GameWIndowClasses\CardsToControlsAssigner.cs" />
+    <Compile Include="GameWIndowClasses\EngineHostDataOperator.cs" />
+    <Compile Include="GameWIndowClasses\GameStatusNameProvider.cs" />
+    <Compile Include="GameWIndowClasses\GameWindowConstructor.cs" />
+    <Compile Include="GameWIndowClasses\GameStateDataTranslator.cs" />
+    <Compile Include="GameWIndowClasses\NextPlayerNumberSpecifier.cs" />
+    <Compile Include="Classes\Settings.cs" />
+    <Compile Include="GameWIndowClasses\PlayersRectanglesColorAssigner.cs" />
+    <Compile Include="GameWIndowClasses\RankAndSuitNameProvider.cs" />
+    <Compile Include="GameWIndowClasses\ThisUserControlsEnabler.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="MainWindowData\SavedDataClass.cs" />
+    <Compile Include="ObjectsDestroyer\MemoryManagement.cs" />
+    <Compile Include="Pages\EngineHostsListPage.xaml.cs">
+      <DependentUpon>EngineHostsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlayersListPage.xaml.cs">
+      <DependentUpon>PlayersListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AuthorInfoResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthorInfoResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\CardDescriptionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CardDescriptionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\GameStatusDescriptionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameStatusDescriptionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\MakingMoveDescriptionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MakingMoveDescriptionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\FwdBckHandlers\CardsDescriotionFwdBckHandler.cs" />
+    <Compile Include="RulesWindow\CardsDescriptionsPages\CardDescriptionPage.xaml.cs">
+      <DependentUpon>CardDescriptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\FwdBckHandlers\GameStatusDescriptionFwdBckHandler.cs" />
+    <Compile Include="RulesWindow\FwdBckHandlers\MakingMoveDescrptionFwdBckHandler.cs" />
+    <Compile Include="RulesWindow\GameStatusDescriptionPages\GameStatusDescriptionPage.xaml.cs">
+      <DependentUpon>GameStatusDescriptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\ChoosenCardsPage.xaml.cs">
+      <DependentUpon>ChoosenCardsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\ContentAssigner.cs" />
+    <Compile Include="RulesWindow\MovementPages\FirstCardJokerChangePage.xaml.cs">
+      <DependentUpon>FirstCardJokerChangePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\FirstCardJokerPage.xaml.cs">
+      <DependentUpon>FirstCardJokerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\GameEndedPage.xaml.cs">
+      <DependentUpon>GameEndedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\ImpossibilityOfMovePage.xaml.cs">
+      <DependentUpon>ImpossibilityOfMovePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\JokerChangePage.xaml.cs">
+      <DependentUpon>JokerChangePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\MakingMovePagesHandler.cs" />
+    <Compile Include="RulesWindow\MovementPages\MoreThanOneCardPage.xaml.cs">
+      <DependentUpon>MoreThanOneCardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\PlayerCardsWithChangedJokerPage.xaml.cs">
+      <DependentUpon>PlayerCardsWithChangedJokerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\PossibilityOfMovePage.xaml.cs">
+      <DependentUpon>PossibilityOfMovePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\RankDemandingPage.xaml.cs">
+      <DependentUpon>RankDemandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\StopsAmountInfoPage.xaml.cs">
+      <DependentUpon>StopsAmountInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\SuitDemandingPage.xaml.cs">
+      <DependentUpon>SuitDemandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\MovementPages\WaitingInStopsModePage.xaml.cs">
+      <DependentUpon>WaitingInStopsModePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RulesWindow\PagesEnums\MakingMoveDescriptionEnum.cs" />
+    <Compile Include="RulesWindow\ResourceHandlers\MakingMoveImageSourceObtainer.cs" />
+    <Compile Include="UserAdministrationWindows\CardBackColorConverter.cs" />
+    <Compile Include="UserAdministrationWindows\CreateNewUser.xaml.cs">
+      <DependentUpon>CreateNewUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdministrationWindows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdministrationWindows\PasswordEncryptor.cs" />
+    <Compile Include="RulesWindow\RulesWindow.xaml.cs">
+      <DependentUpon>RulesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdministrationWindows\PlayerData.cs" />
+    <Compile Include="UserAdministrationWindows\PlayerDefinition.cs" />
+    <Compile Include="UserAdministrationWindows\RealmUserHandler.cs" />
+    <Compile Include="UserAdministrationWindows\ThirdPlayerLocationConverter.cs" />
+    <Compile Include="Windows\AddEndpointManuallyWindow.xaml.cs">
+      <DependentUpon>AddEndpointManuallyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AuthorInfoWindow.xaml.cs">
+      <DependentUpon>AuthorInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AvatarChoice.xaml.cs">
+      <DependentUpon>AvatarChoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BattleCardWindow.xaml.cs">
+      <DependentUpon>BattleCardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DemandTheRankWindow.xaml.cs">
+      <DependentUpon>DemandTheRankWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DemandTheSuitWindow.xaml.cs">
+      <DependentUpon>DemandTheSuitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FirstCardJokerPermittedCardsSelection.xaml.cs">
+      <DependentUpon>FirstCardJokerPermittedCardsSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GameFinishedWindow.xaml.cs">
+      <DependentUpon>GameFinishedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GameWindow.xaml.cs">
+      <DependentUpon>GameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\JokerChange.xaml.cs">
+      <DependentUpon>JokerChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\JokerWindowEventsArgs.cs" />
+    <Compile Include="Windows\PasswordInputWindow.xaml.cs">
+      <DependentUpon>PasswordInputWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StartNewHostWindow.xaml.cs">
+      <DependentUpon>StartNewHostWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserSettingsWindow.xaml.cs">
+      <DependentUpon>UserSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\EngineHostsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlayersListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\CardsDescriptionsPages\CardDescriptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\GameStatusDescriptionPages\GameStatusDescriptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\ChoosenCardsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\FirstCardJokerChangePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\FirstCardJokerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\GameEndedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\ImpossibilityOfMovePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\JokerChangePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\MoreThanOneCardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\PlayerCardsWithChangedJokerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\PossibilityOfMovePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\RankDemandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\StopsAmountInfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\SuitDemandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\MovementPages\WaitingInStopsModePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RulesWindow\RulesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAdministrationWindows\CreateNewUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAdministrationWindows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEndpointManuallyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AuthorInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AvatarChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BattleCardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DemandTheRankWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DemandTheSuitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\FirstCardJokerPermittedCardsSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GameFinishedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\JokerChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PasswordInputWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StartNewHostWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\AuthorInfoResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AuthorInfoResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\CardDescriptionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CardDescriptionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\GameStatusDescriptionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GameStatusDescriptionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MakingMoveDescriptionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MakingMoveDescriptionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="MakaoGraphicsRepresentation_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardGraphicsLibraryHandler\CardGraphicsLibraryHandler.csproj">
+      <Project>{57dbcba2-7496-41ed-ac40-4dffd257a9e7}</Project>
+      <Name>CardGraphicsLibraryHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CardsRepresentation\CardsRepresentation.csproj">
+      <Project>{4139f76e-0792-4f55-bba3-123e86ed2700}</Project>
+      <Name>CardsRepresentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EngineHost\EngineHost.csproj">
+      <Project>{6dd60467-5688-46b2-a074-70ed0db68c90}</Project>
+      <Name>EngineHost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MakaoEngine\MakaoEngine.csproj">
+      <Project>{1cc6dd6a-e9cd-413d-944b-26780b1892d2}</Project>
+      <Name>MakaoEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MakaoGameClientService\MakaoGameClientService.csproj">
+      <Project>{a6bdb460-7bf2-4f1b-b5d5-3704a7d9c6d7}</Project>
+      <Name>MakaoGameClientService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MakaoGameHostService\MakaoGameHostService.csproj">
+      <Project>{a26575cd-c3ce-49bb-9f0d-974351a65000}</Project>
+      <Name>MakaoGameHostService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MakaoInterfaces\MakaoInterfaces.csproj">
+      <Project>{be8c07d2-b515-4575-b4c1-9e5187d51d3d}</Project>
+      <Name>MakaoInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="MakaoWPF.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\battlestatus.png" />
+    <Resource Include="Resources\standardstatus.png" />
+    <Resource Include="Resources\stopsstatus.png" />
+    <Resource Include="Resources\suitdemandingstatus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rankdemandingstatus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourcesMovement\ChoosenCards.png" />
+    <Resource Include="ResourcesMovement\FirstCardJoker.png" />
+    <Resource Include="ResourcesMovement\FirstCardJokerChange.png" />
+    <Resource Include="ResourcesMovement\GameEnded.png" />
+    <Resource Include="ResourcesMovement\ImpossibilityOfMove.png" />
+    <Resource Include="ResourcesMovement\JokerChange.png" />
+    <Resource Include="ResourcesMovement\MoreThanOneCard.png" />
+    <Resource Include="ResourcesMovement\PlayerCardsWithChangedJoker.png" />
+    <Resource Include="ResourcesMovement\PossibilityOfMove.png" />
+    <Resource Include="ResourcesMovement\RankDemanding.png" />
+    <Resource Include="ResourcesMovement\StopsAmountInfo.png" />
+    <Resource Include="ResourcesMovement\SuitDemanding.png" />
+    <Resource Include="ResourcesMovement\WaitingInStopsMode.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.4.0.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.0.2\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\FodyHelpers.4.0.2\build\FodyHelpers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\FodyHelpers.4.0.2\build\FodyHelpers.props'))" />
+    <Error Condition="!Exists('..\packages\FodyHelpers.4.0.2\build\FodyHelpers.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\FodyHelpers.4.0.2\build\FodyHelpers.targets'))" />
+    <Error Condition="!Exists('..\packages\Realm.Fody.4.1.0\build\Realm.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Realm.Fody.4.1.0\build\Realm.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Realm.4.1.0\build\Realm.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Realm.4.1.0\build\Realm.props'))" />
+  </Target>
+  <Import Project="..\packages\FodyHelpers.4.0.2\build\FodyHelpers.targets" Condition="Exists('..\packages\FodyHelpers.4.0.2\build\FodyHelpers.targets')" />
+</Project>

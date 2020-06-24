@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChoosenCardsHeading" xml:space="preserve">
+    <value>Jak zagrywać karty?</value>
+  </data>
+  <data name="ChoosenCardsText01" xml:space="preserve">
+    <value>Każda wybrana przez Ciebie karta, która pasuje do aktualnego kontekstu gry zostanie wyświetlona w kontrolce altualnie wybranych przez Ciebie kart do zagrania w bieżącym ruchu. Karty pojawią sie tutaj w dokładnie takiej kolejności, w jakiej zaznaczałeś je w kontrolce Twoich kart. Jeśli pojawi sie tutaj chociaż jedna karta, pojawi się także przycisk z opisem "Wykonaj ruch" - to właśne ten przycisk powinieneś wcisnąć, żeby definitywnie potwierdzić karty, które chcesz w tym ruchu wyłożyć na stół.</value>
+  </data>
+  <data name="ChoosenCardsText02" xml:space="preserve">
+    <value>W przypadku trybu postojów, kiedy inny gracz wyłożył na stół czwórkę, i teraz nastała Twoja kolej ruchu, to wtedy gdy masz w rękach czwórkę, lub jokera, będziesz miał możliwość dobrowolnego wyboru czekania, zamiast położenia następnej czwórki na stół. W tym przypadku, w miejscu przycisku "Wykonaj ruch", pojawi się inny: "Czekaj...". Wciskając ten przycisk, wyrazisz chęć czekania kolejek.</value>
+  </data>
+  <data name="FirstCardJokerChangeHeading" xml:space="preserve">
+    <value>Zmiana jokera (pierwsza karta z talii)</value>
+  </data>
+  <data name="FirstCardJokerChangeText01" xml:space="preserve">
+    <value>Jeśli w trybie bitwy będziesz zmuszony wziąć karty z talii i pierwszą z nich okaże się joker, wówczas możesz go zagrać. Jeśłi się na to zdecydujesz, będziesz musiał zmienić go w inną kartę. Okno przedstawione na zdjęciu po prawej, to okno wyboru karty, w którą możesz zmienic jokera. Tutaj nie ma listy wszystkich kart, a jedynie lista kart, w które możesz jokera zmienić, i które pasują do bieżącego kontekstu gry. Czyli jeśli np. kartą, któa leży szczycie stosu kart ze stołu jest dwójka pik, to w liście dostęnych kart, w które możesz jokera zmienić, nie będzie trójki serce.
+W przypadku tego okna, również musisz dokonać wyboru karty, zanim wciśniesz przycisk "OK", w przeciwnym wypadku otrzymasz stosowny komunikat.</value>
+  </data>
+  <data name="FirstCardJokerChangeText02" xml:space="preserve">
+    <value>Ponadto, jeśli w standardowym trybie gry weźmiesz kartę, i okaże się nią joker - masz dokładnie takie same możliwości. Dodatkowo, jeśli zmienisz jokera w waleta, to pojawi się opcja wyboru żądanej figury, a jeśli w asa, to pojawi się opcja wyboru żądanego koloru.</value>
+  </data>
+  <data name="FirstCardJokerHeading" xml:space="preserve">
+    <value>Joker jako pierwsza karta w talii (tryb bitwy)</value>
+  </data>
+  <data name="FirstCardJokerText01" xml:space="preserve">
+    <value>Jeśli na danym etapie gry, aktywny jest tryb bitwy, następuje Twoja kolej na wykonanie ruchu, a Ty nie masz w rękach kart, które mógłbyś położyć na stole, wówczas musisz wziąż karty z talii. Jeśli masz szczęście, może sdażyć się tak, że pierwszą kartą jaka jest w stosie kart w talii jest joker. Jeśli tak się stanie, na ekranie pojawi się okno - takie jak na zdjęciu po prawej. Wówczas masz możliwość wykożystania tego jokera (zmieniając go w inną kartę), lub anulowanie tego i wzięcia pozostałej liczby kart. Oczywiście może też się zdarzyć tak, że wylosujesz kartę, która po prostu pasuje do kontekstu bitwy, wówczas będziesz mógł ją położyć, lub nie.
+</value>
+  </data>
+  <data name="FirstCardJokerText02" xml:space="preserve">
+    <value>Jeśli zdecydujesz się zagrać tego jokera, wówczas musisz wcisnąc przycisk "Zmień jokera", spowoduje to pojawienie sie kolejengo okna, o którym na następnej stronie. Po wyborze, w tym oknie pojawi sie grafika wybranej przez Ciebie karty, a Ty będziesz mógł ją zagrać i dzięki temu nie przegrasz bitwy, a będzie ona toczyc się dalej.</value>
+  </data>
+  <data name="GameEndedHeading" xml:space="preserve">
+    <value>Koniec gry</value>
+  </data>
+  <data name="GameEndedText01" xml:space="preserve">
+    <value>Gra kończy się wtedy, gdy tylko jeden gracz ma jakieś karty w rękach, a pozostali gracze nie mają już kart. Wówczas na ekranie pojawi okno, którego zdjęcie jest przedstawione niżej. Przedstawione są tutaj pozycje, jakie zajęli gracze, a także liczba gier, które zagrali, oraz liczba gier, w których zwyciężyli (gracz, który jako pierwszy położy na stole wszystkie karty, zwycięża). Kliknięcie przycisku "Zamknij" powoduje powrót do głównego okna aplikacji.</value>
+  </data>
+  <data name="GameEndedText02" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ImpossibilityOfMoveHeading" xml:space="preserve">
+    <value>Kiedy nie można wykonać ruchu?</value>
+  </data>
+  <data name="ImpossibilityOfMoveText01" xml:space="preserve">
+    <value>Analogicznie do sytuacji w której możesz wykonac ruch (jest Twoja kolej), ruchu nie możesz wykonać, jesli to kolej innego gracza. Tak jak twoja nazwa jest podświetlona na złoto, kiedy to Twoja kolej na wykonanie ruchu, tak w przeciwnym przypadku, Twoja nazwa ma niebieskie podświetlenie. Ponadto, kontrolka przedstawiająca Twoje karty nie jest aktywna - po najechaniu na poszczególne karty myszą, nie zauważysz żadnej reakcji.</value>
+  </data>
+  <data name="ImpossibilityOfMoveText02" xml:space="preserve">
+    <value>Poniższe zdjęcie przedstawia właśnie taką sytuację - podświetlenie Twojej nazwy jest niebieskie, a najechanie myszą na poszczególne karty, nie powoduje żadnej reakcji.</value>
+  </data>
+  <data name="JokerChangeHeading" xml:space="preserve">
+    <value>Zmiana jokera w Twoich kartach</value>
+  </data>
+  <data name="JokerChangeText01" xml:space="preserve">
+    <value>Jeśli to Twoja kolej na wykonanie ruchu, a masz w kartach jokera, którego chciałbyć wykorzystać, musisz najpierw go zmienić w inną kartę. Jokera samego w sobie nie można połozyć na stole - musisz najpierw zdefiniować, w jaką kartę go zmieniasz. Żeby to zrobić, kliknij na karcie jokera prawym przyciskiem myszy. Na keranie pojawi sie okno, krego zdjęcie znajduje się po prawej stronie. W tym oknie definiujesz, w jaką kartę chcesz zmienić jokera. Najpierw kolor - po wybraniu koloru, pojawią się figury, a potem konkretną figurę. </value>
+  </data>
+  <data name="JokerChangeText02" xml:space="preserve">
+    <value>Dopiero po wybraniu i koloru i figury, możesz potwierdzić zmianę - przyciskiem "OK". Oczywiście, możesz anulować zmianę - przycisk "Anuluj". Po pomyślnej zmianie jokera w inną kartę, na lewym boku karty pojawia sie napis "joker", ale o tym szerzej na następnej stronie. Jeśli zmienioną kartę, chcesz przywrócić z powrotem do postaci jokera - kliknij na tej karcie prawym przyciskiem myszy.</value>
+  </data>
+  <data name="MoreThanOneCardHeading" xml:space="preserve">
+    <value>Jak położyć na stole więcej niż jedną kartę?</value>
+  </data>
+  <data name="MoreThanOneCardText01" xml:space="preserve">
+    <value>Jeśli spróbujesz wyłożyć na stół kartę, która nie pasuje do bierzącego statusu gry lub nie pasuje do ostatniej karty wyłożonej na stół - czyli klikniesz jedną ze swoich kart, która nie spełnia tych warunków, nic się nie stanie. Natomiast jeśli klikniesz odpowiednią kartę (pasującą do kontekstu), wówczas karta ta wyświetli się w kontrolce aktualnie wybranych kart (następna strona), oraz na tej karcie, w kontrolce Twoich kart zostanie wyświetlone zielone obramowanie. Dodatkowo, automatycznie wyszarzone zostaną wszystkie karty, które nie pasują do wybranej karty.</value>
+  </data>
+  <data name="MoreThanOneCardText02" xml:space="preserve">
+    <value>W związku z tym, możesz także dobrać inne karty, które nie zostały wyszarzone i które nie mają jeszcze dodanego zielonego obramowania. W praktyce, nie ma limitu liczby kart, które możesz położyć na stół jednym ruchem. Poniższe zdjęcie przedstawia moment wybierania dwóch dziewiątek jako karty do wyłożenia na stół. Zaznaczenie możesz całkowicie anulować, klikając przycisk "Resetuj zaznaczenie" - widoczny tylko, jeśli zaznaczyłeś już jakąś kartę.</value>
+  </data>
+  <data name="PlayerCardsWithChangedJokerHeading" xml:space="preserve">
+    <value>Jak rozpoznać kartę zmienioną w jokera?</value>
+  </data>
+  <data name="PlayerCardsWithChangedJokerText01" xml:space="preserve">
+    <value>Po zmianie jednej z Twoich kart w jokera - np. przed wykonaniem ruchu, będzie on widoczny jak karta, w która zmieniłes jokera - np. Król serce. Żeby istniała możłiwość odróznienia tej karty od prawdziwego króla serce, po lewej stronie zmienionej karty pojawia się czerwony napis "joker". Właśnie to sygnalizuje kartę, króa została zmieniona z jokera w inną.
+Jeśli tę karte położysz na stół, napis "joker" nie jest już wyświetlany, podobnie w przypadku kontrolki wybranych przez Ciebie kart do położenia na stole w bieżącym ruchu. To jest informacja wyłącznie dla Ciebie.</value>
+  </data>
+  <data name="PlayerCardsWithChangedJokerText02" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PossibilityOfMoveHeading" xml:space="preserve">
+    <value>Kiedy można wykonać ruch?</value>
+  </data>
+  <data name="PossibilityOfMoveText01" xml:space="preserve">
+    <value>Gracze wykonuja ruchy po sobie, w kierunku zgodnym z ruchem wskazówek zegara. Fakt, że teraz Ty wykonujesz ruch możesz rozpoznać po tym, że Twoja nazwa (imię), pod Twoim avatarem w oknie gry jest podświetlona na kolor złoty. Poza tym, jeśli to Twoja kolej, Twoje karty będę się animować, jeśli będziesz najeżdżał na nie kursorem myszy. Oba te zjawiska przedstwione sa na poniższym obrazku.</value>
+  </data>
+  <data name="PossibilityOfMoveText02" xml:space="preserve">
+    <value>Jak widzisz, nazwa gracza (w tym przypadku "User") jest podświetlona na złoto, a także, karta (tutaj dziesiątka karo) powiększyła się po najechaniu na nią myszą.</value>
+  </data>
+  <data name="RankDemandingHeading" xml:space="preserve">
+    <value>Jak żądać figur?</value>
+  </data>
+  <data name="RankDemandingText01" xml:space="preserve">
+    <value>Kiedy to Twoja kolej ruchu, i kiedy kontrolka z Twoimi kartami jest aktywna, możesz położyć na stole waleta (jeśli masz go w kartach i jeśli pasuje do kontekstu gry). Jeśli walet to pierwsza karta jaką wybierasz do wyłożenia na stole w ramach bieżącego ruchu, na ekranie automatycznie pojawi się okno z wyborem żądania figury. Możesz nie korzystać z opcji żądania - wtedy wciśnij przysick "Anuluj" w tym oknie. Nie sugeruj sie kolorem kart pokazanych w tym okienku - mają one taki sam kolor jak walet, którego kliknąłeś. Pokazane są tutaj wszystkie figury, jakich można żądać. Po kliknięciu jednej z figur, podświetli sie ona na niebiesko. Dopiero po kliknięciu wybranej figury możesz zatwierdzić wybór przyciskiem "OK".</value>
+  </data>
+  <data name="RankDemandingText02" xml:space="preserve">
+    <value>Omawiane okno przedstaione jest na powyższej grafice. Wybrana przez Ciebie figura podświetlona zostanie na niebiesko, natomiast najechanie myszą na którąkolwiek z figur spowoduje jej podświetlenie na inny odcień niebieskiego.</value>
+  </data>
+  <data name="StopsAmountInfoHeading" xml:space="preserve">
+    <value>Informacja o czekaniu kolejek</value>
+  </data>
+  <data name="StopsAmountInfoText01" xml:space="preserve">
+    <value>Jeśli zdaży się tak, że to Ty jesteś graczem, któremu wypadnie konieczność czekania kilku kolejek, Twoje kontrolki zostaną zablokowane, a na tle głównej kontrolki - kontrolki Twoich kart, pojawi się informacja z liczbą kolejek, które jeszcze musisz pominąć - zdjęcie poniżej. Liczba kolejek do czekania będzie się sykcesywnie zmniejszać, wraz z postępowaniem ruchów Twoich rywali - aż do momentu, gdy liczba ta spadnie do zera i będziesz mógł wykonać swój ruch.</value>
+  </data>
+  <data name="StopsAmountInfoText02" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SuitDemandingHeading" xml:space="preserve">
+    <value>Jak żądać koloru?</value>
+  </data>
+  <data name="SuitDemandingText01" xml:space="preserve">
+    <value>Analogicznie do możliwości żądania figury - jeśli pierwszą kartą, jaką zdecydujesz sie położyć na stole jest as, wówczas na ekranie wyświetli się okno z możliwością wyboru żądanego koloru. Oczywiście, tak jak w przypadku żądania figur, opcję żądania koloru także można anulować (nie korzystać z niej) - wyztarczy wcisnąć przycisk "Anuluj". Tutaj również działa podświetlanie wybranego koloru na niebiesko.</value>
+  </data>
+  <data name="SuitDemandingText02" xml:space="preserve">
+    <value>Po dokonaniu wyboru, należy go potwierdzić przyciskiem "OK". Jeśli żaden kolor nie został jeszcze wybrany, a przycisk "OK" zostanie wciśnięty, wówczas na ekranie pojawi się stosowny komunikat, a wyboru trzeba będzie faktycznie dokonać.</value>
+  </data>
+  <data name="WaitingInStopsModeHeading" xml:space="preserve">
+    <value>Czekanie kolejek</value>
+  </data>
+  <data name="WaitingInStopsModeText01" xml:space="preserve">
+    <value>Jeśli w trybie postojów, zdecydujesz się czekac kolejki (pomimo posiadania jokera lub czwórki), w kontrolce kart wybranych przez Ciebie, pojawi się przycisk "Czekaj...". Jego wciśnięcie spowoduje teo, że to Ty będziesz czekał kolejki.</value>
+  </data>
+  <data name="WaitingInStopsModeText02" xml:space="preserve">
+    <value />
+  </data>
+</root>

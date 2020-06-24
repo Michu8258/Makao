@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="CardsRepresentation.MainUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CardsRepresentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="_this">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="Card" TargetType="{x:Type local:MyButton}">
+            <Grid>
+                <Rectangle x:Name="MyBackground">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="White" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                </Rectangle>
+                <Image x:Name="CardImage" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Source="{Binding Path=CardImage, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+                <Rectangle x:Name="FromJokerText" Visibility="{Binding Path=FromJoker, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="Red" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="FromJoker.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="GreenHighlight" Opacity="0.5" Visibility="{Binding Path=AlreadySelected, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="Green" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Green highlight.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="NotSuitableCard" Opacity="0.5" Visibility="{Binding Path=NotPermitted, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="Gray" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="NotPermitted.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Control.LayoutTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.0" ScaleY="1.0" CenterX="2000" CenterY="0"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="LayoutTransform.(ScaleTransform.ScaleX)"
+                                                 Duration="0:0:0.15" From="1" To="1.25" AutoReverse="False"
+                                                 RepeatBehavior="1x"/>
+                                <DoubleAnimation Storyboard.TargetProperty="LayoutTransform.(ScaleTransform.ScaleY)"
+                                                 Duration="0:0:0.15" From="1" To="1.25" AutoReverse="False"
+                                                 RepeatBehavior="1x"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Name="CardStyle" TargetType="{x:Type local:MyButton}">
+            <Setter Property="Template" Value="{StaticResource Card}"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="Frame">
+        <Rectangle Fill="Transparent"/>
+        <Grid x:Name="ControlGrid" SizeChanged="ControlGrid_SizeChanged"/>
+        <Label x:Name="ResetSelestionLabel" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="160" HorizontalContentAlignment="Center"
+               FontSize="14" Foreground="Blue" Visibility="Collapsed" Background="GhostWhite">
+            <TextBlock x:Name="ResetSelectionText" TextDecorations="Underline" Text="Resetuj zaznaczenie" FontWeight="Bold" />
+        </Label>
+    </Grid>
+</UserControl>

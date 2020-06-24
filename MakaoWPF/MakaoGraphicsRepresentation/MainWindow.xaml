@@ -1,0 +1,65 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakaoGraphicsRepresentation"   
+        x:Class="MakaoGraphicsRepresentation.MainWindow"
+        mc:Ignorable="d"
+        Title="Makao" Height="450" Width="800" ResizeMode="CanMinimize"  Closing="Window_Closing"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu Margin="0,0,0,0" VerticalAlignment="Top" Height="25" Background="#FFF0F0FF">
+            <MenuItem Header="_Menu" Height="25">
+                <MenuItem x:Name="menuRules" Header="_Zasady gry w makao" Click="MenuRules_Click"/>
+                <MenuItem x:Name="menuSettings" Header="_Ustawienia" Click="MenuSettings_Click"/>
+                <Separator/>
+                <MenuItem x:Name="menuStartNewGame" Header="_Twórz nową grę" Click="MenuStartNewGame_Click"/>
+                <MenuItem x:Name="menuJoinGame" Header="_Dołącz do gry" Click="MenuJoinGame_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Użytkownicy" Height="25">
+                <MenuItem x:Name="menuLogin" Header="Z_aloguj się" Click="MenuLogin_Click"/>
+                <MenuItem x:Name="menuCreateNewUser" Header="St_wórz nowego użytkownika" Click="MenuCreateNewUser_Click"/>
+                <MenuItem x:Name="menuLogout" Header="_Wyloguj się" Click="MenoLogout_Click" IsEnabled="False"/>
+            </MenuItem>
+            <MenuItem x:Name="menuAbout" Header="O aplikacji" Click="MenuAbout_Click"/>
+        </Menu>
+        <StatusBar Margin="0,0,0,0" Height="25" VerticalAlignment="Bottom" Background="#FFF0F0FF" Grid.Row="1">
+            <StatusBarItem>
+                <TextBlock x:Name="UserIPString" Text=""/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="UserNameText" Text=""/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="hostOrClientText" Text="Twój komputer jest obecnie: " Visibility="Collapsed"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="applicationType" Text="-----" Visibility="Collapsed"/>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Text="Michał Gąsior, Poznań 2019   "/>
+            </StatusBarItem>
+        </StatusBar>
+        <Image x:Name="BackgroundTheme" Margin="250,80,70,80"/>
+        <Frame x:Name="MainWindowFrame" NavigationUIVisibility="Hidden" Margin="200,25,10,25" HorizontalAlignment="Left" VerticalAlignment="Top"
+               Width="580" Height="370"/>
+        <GroupBox Header="Dostosowanie użytkownika" HorizontalAlignment="Left" Margin="10,35,0,35" Width="180">
+            <StackPanel>
+                <Image x:Name="AvatarImage" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Center" Width="128" Height="128"/>
+                <Button HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="128" Content="Wybierz awatar"
+                        Margin="20,15,0,0" Click="ChangeAvatatarButton_Click"/>
+                <Label Content="Twoje imię:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="25"/>
+                <TextBox x:Name="UsernameText" Height="25" TextWrapping="NoWrap" Text="Użytkownik" HorizontalAlignment="Left"
+                         VerticalAlignment="Top" Width="128" Margin="20,5,0,0" PreviewKeyDown="UsernameText_PreviewKeyDown"
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                
+                <!--Reset player played games data button-->
+                <Button Content="Button" Click="Button_Click_1" Visibility="Collapsed"/>
+            </StackPanel>
+        </GroupBox>
+        
+        <!--Game window test button-->
+        <Button Content="GameWindow" HorizontalAlignment="Left" Margin="693,120,0,0" VerticalAlignment="Top" Width="75"
+                Click="Button_Click_2" Visibility="Collapsed"/>
+    </Grid>
+</Window>

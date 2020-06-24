@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AceCard01" xml:space="preserve">
+    <value>Asy</value>
+  </data>
+  <data name="AceCard02" xml:space="preserve">
+    <value>As to karta funkcyjna, pozwala na zażądanie koloru - pik, kier, trefl albo karo. Przy zagrywaniu tej karty nie jest koniecznym defuniowanie żądanego koloru - wówczas na asa należy położyć kartę zgodną z kolorem wyłożonego wcześniej asa. Tak jak w przypadku Waletów, żądanie koloru może zostać przebite przez kolejnego gracza - z wykorzystaniem innego asa. Różnicą natomiast jest fakt, że żądanie koloru kończy się z pierwszą kartą położoną na stół, której kolor jest równy żądanemu kolorowi.</value>
+  </data>
+  <data name="EightCard01" xml:space="preserve">
+    <value>Ósemki</value>
+  </data>
+  <data name="EightCard02" xml:space="preserve">
+    <value>Ósemka jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="FiveCard01" xml:space="preserve">
+    <value>Piątki</value>
+  </data>
+  <data name="FiveCard02" xml:space="preserve">
+    <value>Piątka jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="FourCard01" xml:space="preserve">
+    <value>Czwórki</value>
+  </data>
+  <data name="FourCard02" xml:space="preserve">
+    <value>Czwórka jest kartą waleczną, niebitewną. Karta ta służy do zatrzymywania ruchu innego gracza. Jeśli poprzedni gracz położy czwórkę na stół, możesz położyć na stół następną czwórkę lub jokera (zmieniając go uprzednio w czwórkę). Jeśli nie masz w ręku kolejnej czwórki lub jokera, to Ty jesteś graczem, który będzie czekał.
+
+Ilość kolejek czekania jest równa liczbie czwórek położonych na stole. Położenie czwórki na stole jest jednoznaczne z tym, że któryś gracz będzie musiał czekać co najmniej jedną kolejkę.</value>
+  </data>
+  <data name="JackCard01" xml:space="preserve">
+    <value>Walety</value>
+  </data>
+  <data name="JackCard02" xml:space="preserve">
+    <value>Walet jest kartą funkcyjną. Dzięki tej karcie możesz żądać innych figur. Możliwe jest także zagranie tej karty, nie żądając przy tym żadnej figury. Zagrywając tę kartę, możesz żądać: piątek, szóstek, siódemek, ósemek, dziewiątek, dziesiątek, a także dam. Po określeniu żądanej figury, następny gracz zobowiązany jest wyłożyć żądaną figurę na stół (ze swoich kart). Jeśli nie ma takiej karty w ręku, musi wziąć kartę ze stosu nowych kart. Następny gracz może także przebić Twoje żądanie (pod warunkiem, że sam ma Waleta w rękach). Po położeniu choć jednej zażądanej karty, żadania nie można już przebić. Żądanie figury kończy się na graczu, który żądanie rozpoczął - musi on umieścić rządaną figurę na stole.</value>
+  </data>
+  <data name="JokerCard01" xml:space="preserve">
+    <value>Jokery</value>
+  </data>
+  <data name="JokerCard02" xml:space="preserve">
+    <value>Joker to potężna karta, gdyż może zostać zmieniony w dowolną kartę z talii, tzn. dowolna figura i dowolny kolor. Po zmianie w inną kartę, można użyć jej zgodnie z zasadami dotyczącymi konkretnej karty. Po wykorzystaniu jokera, gdy kart w talii na stole jest zbyt mało i zużyte karty zostają zabrane ze stołu, potasowane i umieszczone z powrotem w talii, karta ta jest automatycznie przywrócona do postaci jokera.</value>
+  </data>
+  <data name="KingCard01" xml:space="preserve">
+    <value>Króle</value>
+  </data>
+  <data name="KingCard02" xml:space="preserve">
+    <value>Króle można podzielić na waleczne i niewaleczne. Te waleczne (i bitewne jednocześnie) to król pik i kier, a te niewaleczne to trefl i karo. Króle niewaleczne zachowują się jak pozostałe niewaleczne karty, jedyną różnicą jest fakt, że króli nie można żądać za pomocą Waleta. Natomiast króle waleczne (pik i kier) położone na stół rozpoczynają trub bitwy (zobacz "Tryby gry"). Położenie jednego z tych króli na stół, zwiększa liczbę kart do wzięcia przez pokonanego gracza o 5. Dodatkowo, te karty można położyć na niższe karty bitewne o tym samym kolorze, np. króla pik można położyć na dwójkę lub trójkę pik. Dodatkowym elementem jest fakt, że król pik (wyłącznie ta karta) zmienia kierunek następnego ruchu na przeciwny.</value>
+  </data>
+  <data name="NineCard01" xml:space="preserve">
+    <value>Dziewiątki</value>
+  </data>
+  <data name="NineCard02" xml:space="preserve">
+    <value>Dziewiątka jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="QueenCard01" xml:space="preserve">
+    <value>Damy</value>
+  </data>
+  <data name="QueenCard02" xml:space="preserve">
+    <value>Dama jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="SevenCard01" xml:space="preserve">
+    <value>Siódemki</value>
+  </data>
+  <data name="SevenCard02" xml:space="preserve">
+    <value>Siódemka jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="SixCard01" xml:space="preserve">
+    <value>Szóstki</value>
+  </data>
+  <data name="SixCard02" xml:space="preserve">
+    <value>Szóstka jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="TenCard01" xml:space="preserve">
+    <value>Dziesiątki</value>
+  </data>
+  <data name="TenCard02" xml:space="preserve">
+    <value>Dziesiątka jest kartą niewaleczną. Zagranie tej karty nie niesie za sobą żadnych negatywnych skutków dla żadnego z graczy. Karty tej można natomiast żądać (tylko niewaleczne karty), wykorzystując do tego Waleta. Kartę tę można położyć na stół jedynie w przypadku podstawowego trybu gry (zobacz "Tryby gry"), lub gdy inny gracz żąda tej figury.</value>
+  </data>
+  <data name="ThreeCard01" xml:space="preserve">
+    <value>Trójki</value>
+  </data>
+  <data name="ThreeCard02" xml:space="preserve">
+    <value>Trójka jest kartą waleczną, bitewną. Oznacza to, że w przypadku potyczki (bitwy), karta ta położona na stół zwiększa liczbe kart, jaką musi wziąć pokonany gracz ze stosu kart na stole, o trzy. Położenie tej karty na stół jest jednoznaczne z rozpoczęciem bitwy.
+
+W przypadku bitwy, kartę tę można położyć na dowolną inną waleczna kartę, o takim samym kolorze. Np. trójkę pik, można położyć na dwójce lub Królu pik.</value>
+  </data>
+  <data name="TwoCard01" xml:space="preserve">
+    <value>Dwójki</value>
+  </data>
+  <data name="TwoCard02" xml:space="preserve">
+    <value>Dwójka jest kartą waleczną, bitewną. Oznacza to, że w przypadku potyczki (bitwy), karta ta położona na stół zwiększa liczbe kart, jaką musi wziąć pokonany gracz ze stosu kart na stole, o dwie. Położenie tej karty na stół jest jednoznaczne z rozpoczęciem bitwy.
+
+W przypadku bitwy, kartę tę można położyć na dowolną inną waleczna kartę, o takim samym kolorze. Np. dwójkę pik, można położyć na trójce lub Królu pik.</value>
+  </data>
+</root>

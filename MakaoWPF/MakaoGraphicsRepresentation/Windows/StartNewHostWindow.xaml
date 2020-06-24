@@ -1,0 +1,81 @@
+﻿<Window x:Class="MakaoGraphicsRepresentation.Windows.StartNewHostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakaoGraphicsRepresentation.Windows"
+        mc:Ignorable="d"
+        Title="Rozpocznij nową grę" WindowStartupLocation="CenterOwner" Height="390" Width="410" ResizeMode="NoResize">
+    <Grid>
+        <!--DEFINING AMOUNT OF PLAYERS-->
+        <Label Content="Zdefiniuj liczbę graczy:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="30"
+                Width="180"/>
+        <ComboBox x:Name="AmountOfPlayersComboBox" HorizontalAlignment="Left" Margin="230,20,0,0" VerticalAlignment="Top" Width="150" 
+                VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" Height="25" FontSize="12"
+                SelectionChanged="AmountOfPlayersComboBox_SelectionChanged">
+            <ComboBoxItem Content="2 graczy"/>
+            <ComboBoxItem Content="3 graczy"/>
+            <ComboBoxItem Content="4 graczy"/>
+        </ComboBox>
+
+        <!--DEFINING AMOUNT OF DECKS-->
+        <Label Content="Zdefiniuj liczbę talii kart:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,60,0,0" Height="30"
+                Width="180"/>
+        <ComboBox x:Name="AmountOfDecksComboBox" HorizontalAlignment="Left" Margin="230,60,0,0" VerticalAlignment="Top" Width="150" 
+                VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" Height="25" FontSize="12"
+                SelectionChanged="AmountOfDecksComboBox_SelectionChanged">
+            <ComboBoxItem Content="1 talia"/>
+            <ComboBoxItem Content="2 talie"/>
+            <ComboBoxItem Content="3 talie"/>
+            <ComboBoxItem Content="4 talie"/>
+        </ComboBox>
+
+        <!--DEFINING AMOUNT OF JOKERS-->
+        <Label Content="Zdefiniuj liczbę jokerów w talii:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,100,0,0" Height="30"
+                Width="180"/>
+        <ComboBox x:Name="AmountOfJokersComboBox" HorizontalAlignment="Left" Margin="230,100,0,0" VerticalAlignment="Top" Width="150" 
+                VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" Height="25" FontSize="12"
+                SelectionChanged="AmountOfJokersComboBox_SelectionChanged">
+            <ComboBoxItem Content="Brak jokerów"/>
+            <ComboBoxItem Content="1 joker"/>
+            <ComboBoxItem Content="2 jokery"/>
+            <ComboBoxItem Content="3 jokery"/>
+        </ComboBox>
+
+        <!--DEFINING AMOUNT OF CARDS GIVEN TO PLAYER AT THE GAME START-->
+        <Label Content="Zdefiniuj liczbę kart na starcie:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,140,0,0" Height="30"
+                Width="180"/>
+        <ComboBox x:Name="AmountOfStartCardsComboBox" HorizontalAlignment="Left" Margin="230,140,0,0" VerticalAlignment="Top" Width="150" 
+                VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" Height="25" FontSize="12"
+                SelectionChanged="AmountOfStartCardsComboBox_SelectionChanged">
+            <ComboBoxItem Content="2 karty"/>
+            <ComboBoxItem Content="3 karty"/>
+            <ComboBoxItem Content="4 karty"/>
+            <ComboBoxItem Content="5 kart"/>
+            <ComboBoxItem Content="6 kart"/>
+            <ComboBoxItem Content="7 kart"/>
+            <ComboBoxItem Content="8 kart"/>
+            <ComboBoxItem Content="9 kart"/>
+            <ComboBoxItem Content="10 kart"/>
+        </ComboBox>
+
+        <!--TYPING IN FIRST PASSWORD-->
+        <Label Content="Utwórz hasło do pokoju:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,180,0,0" Height="30" Width="180"/>
+        <PasswordBox x:Name="FirstPasswordBox" HorizontalAlignment="Left" Margin="230,180,0,0" VerticalAlignment="Top" Width="150" Height="25"
+                FontSize="12" VerticalContentAlignment="Center"/>
+
+        <!--TYPING IN SECOND PASSWORD-->
+        <Label Content="Powtórz hasło do pokoju:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,220,0,0" Height="30" Width="180"/>
+        <PasswordBox x:Name="SecondPasswordBox" HorizontalAlignment="Left" Margin="230,220,0,0" VerticalAlignment="Top" Width="150" Height="25"
+                FontSize="12" VerticalContentAlignment="Center"/>
+
+        <!--PASSWORD ERROR INFORMATION-->
+        <Label x:Name="IncorrectPasswords" Content="Błąd przy wprowadzaniu hasła!" HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="92,260,92,0" Height="30" Width="220" HorizontalContentAlignment="Center" Foreground="Red" FontSize="14" FontWeight="Bold"
+                VerticalContentAlignment="Bottom"  Visibility="Collapsed"/>
+
+        <!--CONFIRM BUTTON-->
+        <Button x:Name="ConformRoomCreationButton" VerticalAlignment="Top" Height="25" Content="OK"
+                Margin="138,310,138,0" Click="ConformRoomCreationButton_Click"/>
+    </Grid>
+</Window>

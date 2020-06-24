@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CardsRepresentation.DeckRepresentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CardsRepresentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="1056" d:DesignWidth="691">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="CardBack" TargetType="{x:Type local:MyButton}">
+            <Grid>
+                <Rectangle x:Name="MyBackground">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="White" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                </Rectangle>
+                <Image x:Name="ImageGraphic" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Source="{Binding Path=BackCardImage, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+            </Grid>
+        </ControlTemplate>
+        <Style x:Name="RectangleStyle" TargetType="{x:Type local:MyButton}">
+            <Setter Property="Template" Value="{StaticResource CardBack}"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="Frame" SizeChanged="Frame_SizeChanged" Background="Transparent">
+        <Grid x:Name="InternalFrame">
+            <Grid x:Name="ActualFrame">
+                
+            </Grid>
+            <TextBlock x:Name="AmountOfCards" Text="10" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextAlignment="Center"
+                       FontWeight="Bold">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background>
+            </TextBlock>
+        </Grid>        
+    </Grid>
+</UserControl>

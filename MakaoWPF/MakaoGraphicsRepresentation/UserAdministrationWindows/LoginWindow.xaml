@@ -1,0 +1,29 @@
+﻿<Window x:Class="MakaoGraphicsRepresentation.UserAdministrationWindows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakaoGraphicsRepresentation.UserAdministrationWindows"
+        mc:Ignorable="d"
+        Title="Logowanie" Height="190" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize"> 
+    <Grid>
+        <!--Login-->
+        <Label Content="Login" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="30" HorizontalContentAlignment="Left"
+            Width="100" VerticalContentAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Height="25" Margin="0,30,20,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="150"
+            VerticalContentAlignment="Center" HorizontalContentAlignment="Left" x:Name="LoginTextBox"/>
+        
+        <!--Password-->
+        <Label Content="Hasło" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top" Height="30" HorizontalContentAlignment="Left"
+            Width="100" VerticalContentAlignment="Top"/>
+        <PasswordBox HorizontalAlignment="Right" Margin="0,70,20,0" VerticalAlignment="Top" Width="150" Height="25" HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center" x:Name="PasswordBox"/>
+        
+        <!--Confirm and cancel buttons-->
+        <Button x:Name="ConfirmButton" Content="OK" HorizontalAlignment="Left" Margin="60,120,0,0" VerticalAlignment="Top" Width="80"
+            Height="25" Click="ConfirmButton_Click"/>
+        <Button x:Name="CancelButton" Content="Anuluj" HorizontalAlignment="Right" Margin="0,120,60,0" VerticalAlignment="Top" Width="80"
+            Height="25" Click="CancelButton_Click"/>
+
+    </Grid>
+</Window>

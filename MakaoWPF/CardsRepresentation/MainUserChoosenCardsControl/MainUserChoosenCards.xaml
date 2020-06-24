@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="CardsRepresentation.MainUserChoosenCards"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CardsRepresentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="200">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="Card" TargetType="{x:Type local:MyButton}">
+            <Grid>
+                <Rectangle x:Name="MyBackground">
+                    <Rectangle.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="White" GlowSize="10"/>
+                    </Rectangle.BitmapEffect>
+                </Rectangle>
+                <Image x:Name="CardImage" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Source="{Binding Path=CardImage, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+            </Grid>
+        </ControlTemplate>
+        <Style x:Name="CardStyle" TargetType="{x:Type local:MyButton}">
+            <Setter Property="Template" Value="{StaticResource Card}"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="Frame">
+        <Rectangle Fill="Transparent"/>
+        <Grid x:Name="ControlGrid" SizeChanged="ControlGrid_SizeChanged"/>
+    </Grid>
+</UserControl>

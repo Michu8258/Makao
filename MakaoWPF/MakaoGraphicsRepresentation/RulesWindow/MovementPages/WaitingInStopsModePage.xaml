@@ -1,0 +1,19 @@
+﻿<Page x:Class="MakaoGraphicsRepresentation.RulesWindow.MovementPages.WaitingInStopsModePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MakaoGraphicsRepresentation.RulesWindow.MovementPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="420" d:DesignWidth="660"
+      Title="WaitingInStopsModePage">
+    <Grid>
+        <TextBlock x:Name="Heading" Margin="50,10,50,0" TextWrapping="NoWrap" Height="30" FontWeight="Bold"
+                   Text="Text" VerticalAlignment="Top" FontSize="20" TextAlignment="Center"/>
+        <TextBlock x:Name="DescriptionText01" Margin="20,60,20,0" TextWrapping="WrapWithOverflow"
+                   Text="TextBlock" TextAlignment="Justify" FontSize="12" Height="100" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DescriptionText02" Margin="20,160,20,0" TextWrapping="WrapWithOverflow"
+                   Text="TextBlock" TextAlignment="Justify" FontSize="12" Height="100" VerticalAlignment="Top"/>
+        <Image x:Name="MovementImage" Margin="20,0,20,10" Height="250" VerticalAlignment="Bottom"/>
+    </Grid>
+</Page>

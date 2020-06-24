@@ -1,0 +1,24 @@
+﻿<Application x:Class="MakaoGraphicsRepresentation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MakaoGraphicsRepresentation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ControlTemplate x:Key="WrapPanelItemTemplate" TargetType="{x:Type local:WrapPanelSelectableItem}">
+            <Grid>
+                <Rectangle x:Name="MyBackground" Fill="LightSkyBlue" Margin="0,0,0,0" Height="120" Width="100"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Visibility="{Binding Path=ItemSelected, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+                <Rectangle x:Name="HooverBackground" Height="120" Width="100" Fill="Aqua" Margin="0,0,0,0"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Visibility="{Binding Path=ItemHoovered, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+                <Image x:Name="AvatarImage" Margin="0,0,0,0" Height="110" Width="100"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Source="{Binding Path=ImageSource, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
+            </Grid>
+        </ControlTemplate>
+        <Style x:Name="WrapPanelItemStyle" TargetType="{x:Type local:WrapPanelSelectableItem}">
+            <Setter Property="Template" Value="{StaticResource WrapPanelItemTemplate}"/>
+        </Style>
+    </Application.Resources>
+</Application>

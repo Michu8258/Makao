@@ -1,0 +1,176 @@
+﻿<Window x:Class="MakaoGraphicsRepresentation.Windows.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakaoGraphicsRepresentation.Windows"
+        xmlns:controls="clr-namespace:CardsRepresentation;assembly=CardsRepresentation"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="960" MinHeight="650" ResizeMode="CanResize"
+        Title="Makao" Height="650" Width="800" Closing="Window_Closing">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Window.Resources>
+    <Grid x:Name="MainGrid">
+        <!--COLUMNS AND ROWS DEFINITION-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <!--THIS PLAYER HANDLING-->
+        <Grid x:Name="ThisPlayerArea" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2">
+            <controls:MainUser x:Name="ThisPlayerControl" Margin="135,0,180,10" FirstSelectedCardClick="ThisPlayerControl_FirstSelectedCardClick"
+                               AnotherSelectedCardClick="ThisPlayerControl_AnotherSelectedCardClick" CardJokerClick="ThisPlayerControl_CardJokerClick"
+                               ResetLabel="ThisPlayerControl_ResetLabel"/>
+            <controls:DeckRepresentation x:Name="DeckRepresentationControl" Margin="0,10,10,10" HorizontalAlignment="Right" Width="150"
+                                         IsEnabled="{Binding BlockPossibilityOfTakingCardFromDeck, UpdateSourceTrigger=PropertyChanged}"
+                                         TakeCardClick="DeckRepresentationControl_TakeCardClick"/>
+            <Grid VerticalAlignment="Top" Height="80" Margin="26,19,0,0" HorizontalAlignment="Left" Width="80">
+                <Image x:Name="ThisPlayerImage" Height="80" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="80" Margin="0,0,0,0" Stretch="Uniform" />
+            </Grid>
+            <Rectangle Height="23" Margin="10,111,0,0" Fill="LightSkyBlue" VerticalAlignment="Top"
+                       RadiusX="5" RadiusY="5" Opacity="0.75" HorizontalAlignment="Left" Width="112"
+                       x:Name="ThisPlayerRectangle"/>
+            <TextBlock Height="23" Margin="10,111,0,0" TextWrapping="NoWrap" Text="This Player" VerticalAlignment="Top"
+                       FontSize="16" TextAlignment="Center" FontWeight="Medium" x:Name="ThisPlayerNameControl"
+                       HorizontalAlignment="Left" Width="112"/>
+            <Rectangle x:Name="ThisPlayerIsPausingRectangle" Margin="135,0,180,10" Fill="Gray" Opacity="0.2"
+                       Visibility="{Binding ThisPlayerPauses, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+            <Grid x:Name="PlayerStopsGrid" Margin="135,60,180,60" Visibility="{Binding ThisPlayerPauses, Converter={StaticResource BoolToVis},UpdateSourceTrigger=PropertyChanged}">
+                <Rectangle x:Name="PauseAmountPauseRectangle" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="White"
+                           Width="260" Height="30" Margin="181,11,196,8" RadiusY="5" RadiusX="5" Opacity="0.85" />
+                <TextBlock x:Name="StopsTextBlock" HorizontalAlignment="Center" TextWrapping="NoWrap" Text="Pozostała ilość postojów:"
+                           VerticalAlignment="Center" Width="250" TextAlignment="Center" FontSize="18" Margin="166,14,221,11"
+                           FontWeight="DemiBold" />
+                <TextBlock x:Name="StopsAmountTextBlock" HorizontalAlignment="Center" TextWrapping="NoWrap" 
+                           VerticalAlignment="Center" Width="40" TextAlignment="Center" FontSize="18" Margin="397,14,200,11"
+                           FontWeight="DemiBold" Text="{Binding Path=AmountOfPauseTurns, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+        </Grid>
+
+        <!-- LEFT PLAYER HANDLING-->
+        <Grid x:Name="LeftPlayerArea" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+            <controls:OtherPlayer x:Name="LeftPlayerControl" Margin="10,120,10,0"/>
+            <Grid VerticalAlignment="Top" Height="80" Margin="27,5,27,0">
+                <Image x:Name="LeftPlayerImage" Height="80" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="80" Margin="0,0,0,0" Stretch="Uniform"/>
+            </Grid>
+            <Rectangle Height="23" Margin="10,90,10,0" Fill="LightSkyBlue" VerticalAlignment="Top"
+                       RadiusX="5" RadiusY="5" Opacity="0.75" x:Name="LeftPlayerRectangle"/>
+            <TextBlock Height="23" Margin="10,90,10,0" TextWrapping="NoWrap" Text="Left Player" VerticalAlignment="Top"
+                       FontSize="16" TextAlignment="Center" FontWeight="Medium" x:Name="LeftPlayerNameControl"/>
+        </Grid>
+
+        <!-- UPPER PLAYER HANDLING-->
+        <Grid x:Name="UpperPlayerArea" Grid.Row="0" Grid.Column="1">
+            <controls:OtherPlayer x:Name="UpperPlayerControl" Margin="0,5,120,5"/>
+            <Grid VerticalAlignment="Top" Height="80" Margin="0,5,15,0" HorizontalAlignment="Right" Width="80">
+                <Image x:Name="UpperPlayerImage" Height="80" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="80" Margin="0,0,0,0" Stretch="Uniform" />
+            </Grid>
+            <Rectangle Height="23" Margin="0,90,0,0" Fill="LightSkyBlue" VerticalAlignment="Top"
+                       RadiusX="5" RadiusY="5" Opacity="0.75" HorizontalAlignment="Right" Width="110"
+                       x:Name="UpperPlayerRectangle"/>
+            <TextBlock Height="23" Margin="0,90,0,0" TextWrapping="NoWrap" Text="Upper Player" VerticalAlignment="Top"
+                       FontSize="16" TextAlignment="Center" FontWeight="Medium" x:Name="UpperPlayerNameControl"
+                       HorizontalAlignment="Right" Width="110"/>
+        </Grid>
+
+        <!--RIGHT PLAYER HANDLING-->
+        <Grid x:Name="RightPlayerArea" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+            <controls:OtherPlayer x:Name="RightPlayerControl" Margin="10,120,10,0"/>
+            <Grid VerticalAlignment="Top" Height="80" Margin="27,5,27,0">
+                <Image x:Name="RightPlayerImage" Height="80" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="80" Margin="0,0,0,0" Stretch="Uniform" />
+            </Grid>
+            <Rectangle Height="23" Margin="10,90,10,0" Fill="LightSkyBlue" VerticalAlignment="Top"
+                       RadiusX="5" RadiusY="5" Opacity="0.75" x:Name="RightPlayerRectangle"/>
+            <TextBlock Height="23" Margin="10,90,10,0" TextWrapping="NoWrap" Text="Right Player" VerticalAlignment="Top"
+                       FontSize="16" TextAlignment="Center" FontWeight="Medium" x:Name="RightPlayerNameControl"/>
+        </Grid>
+
+        <!--CARDS ON THE TABLE REPRESENTATION-->
+        <Grid x:Name="CardsOnTheTableArea" Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <controls:MainUserChoosenCards x:Name="ThisPlayerChoosenCardsControl" Margin="10,0,10,-15" Grid.Column="1"/>
+            <controls:TableCardsRepresentation x:Name="AlreadyUsedCardsControl" Margin="0,0,0,0" Grid.Column="0"/>
+
+            <!--CURRENT GAME INFOS-->
+            <StatusBar Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent">
+                <StatusBarItem>
+                    <TextBlock x:Name="DemandedRankTextBlock" Text="Żądana figura:" Visibility="{Binding CardRankIsDemanded,
+                        Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="DemRank" Text="{Binding Path=DemandedRank, UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="{Binding CardRankIsDemanded, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="DemandedSuitTextBlock" Text="Żądany kolor:" Visibility="{Binding CardSuitIsDemanded,
+                        Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="DemSuit" Text="{Binding Path=DemandedSuit, UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="{Binding CardSuitIsDemanded, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="AmountOfCardsTextBlock" Text="Ilość kart do wzięcia:" Visibility="{Binding AmountOfCardsToTakeVisibility,
+                        Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="AmountsOfCardsLostBattle" Text="{Binding Path=AmountOfCardsToTakeLostBattle, UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="{Binding AmountOfCardsToTakeVisibility, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="ThisPlayerDemandedRankText" Text="Zażądasz figury:" Visibility="{Binding IsPlayerDemandingRank,
+                        Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="ThisPlayerDemandedRank" Text="{Binding Path=RankDemandedByThisPlayer, UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="{Binding IsPlayerDemandingRank, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="ThisPlayerDemandedSuitText" Text="Zażądasz koloru:" Visibility="{Binding IsPlayerDemandingSuit,
+                        Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="ThisPlayerDemandedSuit" Text="{Binding Path=SuitDemandedByThisPlayer, UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="{Binding IsPlayerDemandingSuit, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="StatusText" Text="{Binding Path=GameStatus, UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="Visible"/>
+                </StatusBarItem>
+            </StatusBar>
+            
+            <!--SKIP THE MOVE BUTTON-->
+            <Button x:Name="SkipTheMoveButton" Grid.Column="1" Width="100" Height="25" Content="Czekaj..." VerticalAlignment="Bottom"
+                    Grid.Row="0" Grid.RowSpan="2" Margin="0,0,0,15" HorizontalAlignment="Center"
+                    Visibility="{Binding MoveSkippingEnabled, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"
+                    Click="SkipTheMoveButton_Click" IsEnabled="{Binding MoveSkippingEnabled, UpdateSourceTrigger=PropertyChanged}"/>
+            
+            <!-- MAKE A MOVE BUTTON-->
+            <Button x:Name="MakeAMoveButton" Grid.Column="1" Width="100" Height="25" Content="Wykonaj ruch" VerticalAlignment="Bottom"
+                    Grid.Row="0" Grid.RowSpan="2" Margin="0,0,0,15" HorizontalAlignment="Center"
+                    Visibility="{Binding MakeMoveButtonVisible, Converter={StaticResource BoolToVis}, UpdateSourceTrigger=PropertyChanged}"
+                    Click="MakeAMoveButton_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
